@@ -18,6 +18,15 @@ class Student
       self.new_from_db(row)
     end
   end
+  
+  def self.all_students_in_grade_9 
+    sql = <<-SQL 
+      SELECT students.grade 
+      FROM students 
+      WHERE grade == 9 
+    SQL
+    DB[:conn].execute(sql)
+  end 
 
   def self.find_by_name(name)
     sql = <<-SQL 

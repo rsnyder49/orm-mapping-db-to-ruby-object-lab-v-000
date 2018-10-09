@@ -44,6 +44,7 @@ class Student
       SELECT students.grade 
       FROM students 
       WHERE grade == 10
+      LIMIT 2
     SQL
     DB[:conn].execute(sql)
   end 

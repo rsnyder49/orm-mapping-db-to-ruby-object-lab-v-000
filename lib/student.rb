@@ -53,7 +53,7 @@ class Student
   
   def self.first_student_in_grade_10 
     sql = <<-SQL
-      SELECT students.grade 
+      SELECT *
       FROM STUDENTS 
       WHERE grade == 10
       LIMIT 1 
